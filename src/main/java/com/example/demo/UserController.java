@@ -23,6 +23,6 @@ public class UserController {
 	}
 	@DeleteMapping("/user")
 	void deleteUser() {
-		System.out.println("deleted");
+		//new comment added
 	}
 }
