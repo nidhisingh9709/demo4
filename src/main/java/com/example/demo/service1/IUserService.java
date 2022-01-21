@@ -1,5 +1,7 @@
 package com.example.demo.service1;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.demo.UserRepository;
@@ -16,7 +18,15 @@ public class IUserService {
 
 	public Iterable<User> getUsers() {
 		// TODO Auto-generated method stub
-		return null;
+		return userRepository.findAll();
+	}
+	public Optional<User> getUser(Integer id){
+		return userRepository.findById(id);
+	}
+
+	public void deleteUser(Integer id) {
+		// TODO Auto-generated method stub
+		userRepository.deleteById(id);
 	}
 	
 
